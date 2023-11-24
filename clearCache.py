@@ -4,11 +4,9 @@ import tempfile
 
 def clear_windows_cache():
     try:
-        # Get the path to the temporary files directory
         temp_dir = tempfile.gettempdir()
         temp_dir2 = "C:\Windows\Temp"
 
-        # Iterate over the files in the temporary directory and delete them
         for root, dirs, files in os.walk(temp_dir):
             for file in files:
                 file_path = os.path.join(root, file)
